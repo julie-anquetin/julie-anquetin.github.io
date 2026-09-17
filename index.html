@@ -231,6 +231,30 @@ section {
     border-left: 1px solid var(--abyss-light);
 }
 
+.apropos-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 50px;
+}
+
+.apropos-text {
+    flex: 1 1 50%;
+    min-width: 0;
+}
+
+.apropos-img {
+    flex: 1 1 50%;
+    min-width: 0;
+}
+
+.apropos-img img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 14px;
+    box-shadow: 0 12px 30px rgba(22, 58, 59, 0.15);
+}
+
 
 /* CONTACT */
 
@@ -289,6 +313,29 @@ section {
     background: var(--abyss);
     color: var(--foam);
     transform: translateY(-2px);
+}
+
+
+/* MENTIONS LEGALES */
+
+.legal-footer {
+    background: var(--abyss);
+    color: var(--paper);
+    padding: 30px 40px 40px;
+    text-align: center;
+}
+
+.legal-footer p {
+    margin: 0;
+    font-size: 0.85rem;
+    opacity: 0.75;
+    letter-spacing: 0.01em;
+}
+
+.siren-emoji {
+    display: inline-block;
+    margin-left: 4px;
+    filter: grayscale(0) drop-shadow(0 0 2px rgba(143, 227, 194, 0.4));
 }
 
 
@@ -392,6 +439,11 @@ section {
     .projet { margin-bottom: 34px; }
 
     section, .portfolio-section { padding: 60px 24px; }
+
+    .apropos-content {
+        flex-direction: column;
+        gap: 30px;
+    }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -464,17 +516,29 @@ section {
 
     <h2 style="font-family: var(--font-display); font-weight: 500; font-size: 1.9rem; margin-top: 0;">À propos</h2>
 
-    <p>
-    Docteure en océanographie, j'ai réalisé, au fil de mes travaux, que le plus important à mes yeux était de créer un pont entre la recherche et le grand public.
-    </p>
+    <div class="apropos-content">
 
-    <p>
-    J'ai donc décidé de mettre mes compétences artistiques, acquises par amour du dessin, ainsi que mon esprit de synthèse, peaufiné au cours de mon parcours académique, au service de la vulgarisation des connaissances.
-    </p>
+        <div class="apropos-text">
 
-    <p>
-    Mon objectif est de transformer les recherches de tous domaines en histoires dessinées ou en illustrations ludiques !
-    </p>
+            <p>
+            Docteure en océanographie, j'ai réalisé, au fil de mes travaux, que le plus important à mes yeux était de créer un pont entre la recherche et le grand public.
+            </p>
+
+            <p>
+            J'ai donc décidé de mettre mes compétences artistiques, acquises par amour du dessin, ainsi que mon esprit de synthèse, peaufiné au cours de mon parcours académique, au service de la vulgarisation des connaissances.
+            </p>
+
+            <p>
+            Mon objectif est de transformer les recherches de tous domaines en histoires dessinées ou en illustrations ludiques !
+            </p>
+
+        </div>
+
+        <div class="apropos-img">
+            <img src="apropos.png" alt="Illustration résumant le parcours de Julie Anquetin, du doctorat à la vulgarisation scientifique">
+        </div>
+
+    </div>
 
 </section>
 
@@ -510,6 +574,10 @@ section {
     </div>
 
 </section>
+
+<footer class="legal-footer">
+    <p>Mentions légales — Julie Anquetin, entrepreneure individuelle — SIREN : 130 109 838 <span class="siren-emoji" aria-hidden="true">🧜‍♀️</span></p>
+</footer>
 
 
 <div class="lightbox" id="lightbox">
